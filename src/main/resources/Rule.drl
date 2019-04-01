@@ -1,0 +1,15 @@
+import Product;
+
+rule "offer for diamond"
+    when
+        productObject: Product(type == "diamond")
+    then
+        productObject: productObject.setDiscount(20);
+    end
+rule "offer for gold"
+    when
+        productObject: Product(type == "gold")
+    then
+        productObject: productObject.setDiscount(25);
+    end
+
